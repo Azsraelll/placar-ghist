@@ -1,0 +1,101 @@
+const teams = [
+  { id: 1, name: "Equipe Azul", points: 0, image: "https://via.placeholder.com/100x100/007BFF/ffffff?text=Azul" },
+  { id: 2, name: "Equipe Vermelha", points: 0, image: "https://via.placeholder.com/100x100/DC3545/ffffff?text=Vermelha" },
+  { id: 3, name: "Equipe Verde", points: 0, image: "https://via.placeholder.com/100x100/28A745/ffffff?text=Verde" },
+  { id: 4, name: "Equipe Amarela", points: 0, image: "https://via.placeholder.com/100x100/FFC107/ffffff?text=Amarela" },
+  { id: 5, name: "Equipe Roxa", points: 0, image: "https://via.placeholder.com/100x100/6F42C1/ffffff?text=Roxa" },
+  { id: 6, name: "Equipe Laranja", points: 0, image: "https://via.placeholder.com/100x100/FD7E14/ffffff?text=Laranja" }
+];
+
+const container = document.getElementById("teamsContainer");
+const rankingList = document.getElementById("rankingList");
+
+// Mapeamento de ID -> DOM Element
+const teamMap = new Map();
+
+function createTeamElement(team) {
+  const div = document.createElement("div");
+  div.className = "team";
+  div.dataset.id = team.id;
+
+  div.innerHTML = `
+    <img src="${team.image}" alt="${team.name}">
+    <h2>${team.name}</h2>
+    <input type="number" value="${team.points}" />
+  `;
+
+  const input = div.querySelector("input");
+
+  // Salva valor temporário até pressionar Enter
+  let tempValue = team.points;
+
+  input.addEventListener("input", (e) => {
+    tempValue = parseInt(e.target.value) || 0;
+  });
+
+  input.addEventListener("keydown", (e) => {
+    if (e.key === "Enter") {
+      team.points = tempValue;
+      animateReorder();
+      input.blur(); // tira o foco ao confirmar
+    }
+  });
+
+  return div;
+}
+
+function renderTeams() {
+  teams.forEach(team => {
+    const el = createTeamElement(team);
+    teamMap.set(team.id, el);
+    container.appendChild(el);
+  });
+}
+
+function renderRanking() {
+  rankingList.innerHTML = '';
+  const sorted = [...teams].sort((a, b) => b.points - a.points);
+  sorted.forEach((team, i) => {
+    const li = document.createElement("li");
+    li.textContent = `${i + 1}º - ${team.name} (${team.points} pts)`;
+    rankingList.appendChild(li);
+  });
+}
+
+function animateReorder() {
+  const sorted = [...teams].sort((a, b) => b.points - a.points);
+
+  // Posições antes da ordenação
+  const positions = new Map();
+  sorted.forEach(team => {
+    const el = teamMap.get(team.id);
+    positions.set(team.id, el.getBoundingClientRect().top);
+  });
+
+  // Reordena visualmente
+  sorted.forEach(team => {
+    container.appendChild(teamMap.get(team.id));
+  });
+
+  // Aplica transições
+  sorted.forEach(team => {
+    const el = teamMap.get(team.id);
+    const oldTop = positions.get(team.id);
+    const newTop = el.getBoundingClientRect().top;
+    const deltaY = oldTop - newTop;
+
+    el.style.transition = 'none';
+    el.style.transform = `translateY(${deltaY}px)`;
+
+    requestAnimationFrame(() => {
+      el.style.transition = 'transform 0.4s ease';
+      el.style.transform = 'translateY(0)';
+    });
+  });
+
+  renderRanking();
+}
+
+// Inicializa
+renderTeams();
+renderRanking();
