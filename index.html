@@ -1,26 +1,30 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Placar Interativo</title>
-  <link rel="stylesheet" href="../src/style/style.css" />
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Placar Interativo</title>
+    <link rel="stylesheet" href="../src/style/style.css" />
+  </head>
+  <body>
+    <header>
+      <img src="src/img/logo-ghist.png" alt="Logo logo-ghist" />
+      <h1>II Jogos de História Militar da APMBB</h1>
+      <img src="src/img/logo-ghist.png" alt="Logo logo-ghist" />
+    </header>
+    <main>
+      <div class="main-wrapper">
+        <!-- Equipes -->
+        <div class="container" id="teamsContainer"></div>
 
-  <h1>Placar Interativo - 6 Equipes</h1>
+        <!-- Ranking Lateral -->
+        <div class="ranking">
+          <h2>Ranking Atual</h2>
+          <ul class="ranking-list" id="rankingList"></ul>
+        </div>
+      </div>
+    </main>
 
-  <div class="main-wrapper">
-    <!-- Equipes -->
-    <div class="container" id="teamsContainer"></div>
-
-    <!-- Ranking Lateral -->
-    <div class="ranking">
-      <h2>Ranking Atual</h2>
-      <ul class="ranking-list" id="rankingList"></ul>
-    </div>
-  </div>
-
-  <script src="../src/js/index.js"></script>
-</body>
+    <script src="../src/js/index.js"></script>
+  </body>
 </html>

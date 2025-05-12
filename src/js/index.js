@@ -1,10 +1,10 @@
 const teams = [
-  { id: 1, name: "Equipe Azul", points: 0, image: "https://via.placeholder.com/100x100/007BFF/ffffff?text=Azul" },
-  { id: 2, name: "Equipe Vermelha", points: 0, image: "https://via.placeholder.com/100x100/DC3545/ffffff?text=Vermelha" },
-  { id: 3, name: "Equipe Verde", points: 0, image: "https://via.placeholder.com/100x100/28A745/ffffff?text=Verde" },
-  { id: 4, name: "Equipe Amarela", points: 0, image: "https://via.placeholder.com/100x100/FFC107/ffffff?text=Amarela" },
-  { id: 5, name: "Equipe Roxa", points: 0, image: "https://via.placeholder.com/100x100/6F42C1/ffffff?text=Roxa" },
-  { id: 6, name: "Equipe Laranja", points: 0, image: "https://via.placeholder.com/100x100/FD7E14/ffffff?text=Laranja" }
+  { id: 1, name: "Equipe 1", points: 0, image: "https://via.placeholder.com/100x100/007BFF/ffffff?text=Azul" },
+  { id: 2, name: "Equipe 2", points: 0, image: "https://via.placeholder.com/100x100/DC3545/ffffff?text=Vermelha" },
+  { id: 3, name: "Equipe 3", points: 0, image: "https://via.placeholder.com/100x100/28A745/ffffff?text=Verde" },
+  { id: 4, name: "Equipe 4", points: 0, image: "https://via.placeholder.com/100x100/FFC107/ffffff?text=Amarela" },
+  { id: 5, name: "Equipe 5", points: 0, image: "https://via.placeholder.com/100x100/6F42C1/ffffff?text=Roxa" },
+  { id: 6, name: "Equipe 6", points: 0, image: "https://via.placeholder.com/100x100/FD7E14/ffffff?text=Laranja" }
 ];
 
 const container = document.getElementById("teamsContainer");
