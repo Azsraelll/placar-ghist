@@ -1,10 +1,40 @@
 const teams = [
-  { id: 1, name: "Equipe Duque de Caxias", points: 0, image: "../img/duque.jpg" },
-  { id: 2, name: "Equipe Vermelha", points: 0, image: "https://placehold.co/100x100/DC3545/ffffff?text=Vermelha" },
-  { id: 3, name: "Equipe Verde", points: 0, image: "https://placehold.co/100x100/28A745/ffffff?text=Verde" },
-  { id: 4, name: "Equipe Amarela", points: 0, image: "https://placehold.co/100x100/FFC107/ffffff?text=Amarela" },
-  { id: 5, name: "Equipe Roxa", points: 0, image: "https://placehold.co/100x100/6F42C1/ffffff?text=Roxa" },
-  { id: 6, name: "Equipe Laranja", points: 0, image: "https://placehold.co/100x100/FD7E14/ffffff?text=Laranja" }
+  {
+    id: 1,
+    name: "Equipe Duque de Caxias",
+    points: 0,
+    image: "../../src/img/duque.jpg" // Caminho corrigido
+  },
+  {
+    id: 2,
+    name: "Equipe Vermelha",
+    points: 0,
+    image: "https://placehold.co/100x100/DC3545/ffffff?text=Vermelha"
+  },
+  {
+    id: 3,
+    name: "Equipe Verde",
+    points: 0,
+    image: "https://placehold.co/100x100/28A745/ffffff?text=Verde"
+  },
+  {
+    id: 4,
+    name: "Equipe Amarela",
+    points: 0,
+    image: "https://placehold.co/100x100/FFC107/ffffff?text=Amarela"
+  },
+  {
+    id: 5,
+    name: "Equipe Roxa",
+    points: 0,
+    image: "https://placehold.co/100x100/6F42C1/ffffff?text=Roxa"
+  },
+  {
+    id: 6,
+    name: "Equipe Laranja",
+    points: 0,
+    image: "https://placehold.co/100x100/FD7E14/ffffff?text=Laranja"
+  }
 ];
 
 const container = document.getElementById("teamsContainer");
@@ -99,3 +129,4 @@ function animateReorder() {
 // Inicializa
 renderTeams();
 renderRanking();
+
