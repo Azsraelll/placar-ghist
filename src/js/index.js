@@ -25,15 +25,15 @@ const teams = [
   },
   {
     id: 5,
-    name: "Equipe Roxa",
+    name: "Balduino IV",
     points: 0,
-    image: "https://placehold.co/100x100/6F42C1/ffffff?text=Roxa"
+    image: "../../src/img/Balduino IV.png"
   },
   {
     id: 6,
-    name: "Equipe Laranja",
+    name: "Aldo Chioratto",
     points: 0,
-    image: "https://placehold.co/100x100/FD7E14/ffffff?text=Laranja"
+    image: "../../src/img/Aldo_Chioratto_9_years_old_in_1932.jpg"
   }
 ];
 
