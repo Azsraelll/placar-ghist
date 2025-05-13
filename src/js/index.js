@@ -55,8 +55,6 @@ function createTeamElement(team) {
   `;
 
   const input = div.querySelector("input");
-
-  // Salva valor temporário até pressionar Enter
   let tempValue = team.points;
 
   input.addEventListener("input", (e) => {
@@ -67,7 +65,15 @@ function createTeamElement(team) {
     if (e.key === "Enter") {
       team.points = tempValue;
       animateReorder();
-      input.blur(); // tira o foco ao confirmar
+      input.blur();
+    }
+  });
+
+  // 👉 Atualiza ao sair do campo (mesmo sem Enter)
+  input.addEventListener("blur", () => {
+    if (team.points !== tempValue) {
+      team.points = tempValue;
+      animateReorder();
     }
   });
 
