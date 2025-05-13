@@ -25,7 +25,7 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
   background-color: rgba(189, 2, 2, 0.623);
   border-radius: 10px;
   border: 2px solid black;
@@ -40,6 +40,18 @@ img {
 
 header h1{
   font-size: 50px;
+}
+
+main p{
+  font-size: 30px;
+  text-align: center;
+  background-color: gray;
+  width: 400px;
+  margin: auto;
+  border-radius: 10px;
+  border: 2px solid black;
+  margin-bottom: 5px;
+  padding: 5px;
 }
 
 /* Layout principal */
@@ -64,7 +76,7 @@ header h1{
 .team {
   background: rgb(233, 230, 230);
   border-radius: 10px;
-  padding: 20px;
+  padding: 10px;
   max-width: 350px;
   width: 100%;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
@@ -82,7 +94,7 @@ header h1{
   object-fit: cover;
   border-radius: 20px;
   margin-bottom: 10px;
-  
+  border: 2px solid black;
 }
 
 .team h2 {
