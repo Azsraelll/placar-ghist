@@ -1,27 +1,27 @@
 const teams = [
   {
     id: 1,
-    name: "Equipe Duque de Caxias",
+    name: "Duque de Caxias",
     points: 0,
     image: "../../src/img/duque.jpg" // Caminho corrigido
   },
   {
     id: 2,
-    name: "Equipe Vermelha",
+    name: "Ricardo Coração de Leão",
     points: 0,
-    image: "https://placehold.co/100x100/DC3545/ffffff?text=Vermelha"
+    image: "../../src/img/richard-the-lionheart-8730.jpg"
   },
   {
     id: 3,
-    name: "Equipe Verde",
+    name: "Belisarius",
     points: 0,
-    image: "https://placehold.co/100x100/28A745/ffffff?text=Verde"
+    image: "../../src/img/Belisarius_mosaic.jpg"
   },
   {
     id: 4,
-    name: "Equipe Amarela",
+    name: "Raposo Tavares",
     points: 0,
-    image: "https://placehold.co/100x100/FFC107/ffffff?text=Amarela"
+    image: "../../src/img/raposo-tavares.jpg"
   },
   {
     id: 5,
