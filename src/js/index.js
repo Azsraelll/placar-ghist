@@ -1,39 +1,39 @@
 const teams = [
   {
     id: 1,
-    name: "",
-    points: 0,
-    image: "src/img/" // Caminho corrigido
+    name: "Duque de Caxias",
+    points: 65,
+    image: "src/img/duque.jpg" // Caminho corrigido
   },
   {
     id: 2,
-    name: "",
-    points: 0,
-    image: "src/img/"
+    name: "Ten José Severino Dias",
+    points: 51,
+    image: "src/img/JOSÉ-SEVERINO-DIAS_2-225x300.jpg"
   },
   {
     id: 3,
-    name: "",
-    points: 0,
-    image: "src/img/"
+    name: "Ricardo Coração de Leão",
+    points: 46,
+    image: "src/img/richard-the-lionheart-8730.jpg"
   },
   {
     id: 4,
-    name: "",
-    points: 0,
-    image: "src/img/"
+    name: "Balduino IV",
+    points: 43,
+    image: "src/img/Balduino IV.png"
   },
   {
     id: 5,
-    name: "",
-    points: 0,
-    image: "src/img/"
+    name: "Raposo Tavares",
+    points: 42,
+    image: "src/img/raposo-tavares.jpg"
   },
   {
     id: 6,
-    name: "",
-    points: 0,
-    image: "src/img/"
+    name: "Aldo Chioratto",
+    points: 39,
+    image: "src/img/Aldo_Chioratto_9_years_old_in_1932.jpg"
   }
 ];
 
